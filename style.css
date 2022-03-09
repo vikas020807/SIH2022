@@ -1,0 +1,186 @@
+/*********Navbar*********/
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: "Montserrat" ,sans-serif;
+}
+nav{
+  background: #1A1A40;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 2.2rem;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #BAABDA;
+  font-size: 1.5rem;
+  padding: 7px 13px;
+  /* border-radius: 3px; */
+  text-transform: uppercase;
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 700ms;
+}
+a:hover{
+  color: #F999B7;
+  transition: .5s;
+  text-decoration-color: #A68DAD;
+  font-size: 2rem;
+}
+.checkbtn{
+  font-size: 2.3rem;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+/* @media (max-width: 952px){
+  label.logo{
+    font-size: 3rem;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 1rem;
+  }
+} */
+@media (max-width: 720px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #1A1A40;
+    top: 80px;
+    right: -110%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 1.7rem;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 700ms;
+  }
+  a:hover{
+    background: none;
+    color: #F999B7;
+    transition: .4s;
+    text-decoration-color: #A68DAD;
+    font-size: 2rem;
+
+  }
+  #check:checked ~ ul{
+    right: 0;
+  }
+}
+/***************NavBar-End************?
+/********search-Box************/
+.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 10%;
+  position: relative;
+  padding: auto ;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+
+}
+.search-input:hover{
+  width:100%;
+  box-shadow: 0px 4px 5px 4px rgba(188, 84, 202, 0.2);
+  padding-left: 5px;
+  &.icon{
+    padding-left: 5px;
+  }
+}
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 80px;
+  width: 60px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 25px;
+  padding-left: 30px;
+  padding-right: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+/****************Search-Box Ends****************/
