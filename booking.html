@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIH2022</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            function generateBarCode()
+            {
+                var nric = $('#text').val();
+                var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=1000x1000';
+                $('#barcode').attr('src', url);
+      }
+      </script>
+      <script type="text/javascript">
+      function showqr() {
+  var node = document.getElementById('barcode');
+  if (node.style.visibility=='visible') {
+      node.style.visibility = 'hidden';
+  }
+  else
+      node.style.visibility = 'visible'
+}
+        </script>
+    <style>
+    h1{
+      font-family: "Montserrat" sans-serif;
+      font-size: 3.25rem;
+      font-weight: bolder;
+      padding-left: 400px;
+    }
+    button{
+
+    }
+      .GenQr{
+        display: block;
+
+        margin-top: 80px;
+
+      }
+      #text{
+        display: inline-block;
+        margin-left: 40%;
+        width: 20%;
+      }
+      #barcode{
+        margin-top: 10px;
+        height: 256px;
+        width:  256px;
+          margin-left: 40%;
+          visibility: hidden;
+      }
+      h3{
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-radius: 15px;
+      }
+
+
+    </style>
+</head>
+
+<body>
+  <nav>
+     <input type="checkbox" id="check">
+     <label for="check" class="checkbtn">
+       <i class="fa fa-bars" aria-hidden="true"></i>
+     </label>
+     <label class="logo">QuickTrip</label>
+     <ul>
+       <li><a class="" href="index.html">Home</a></li>
+       <li><a href="login.html">Login</a></li>
+       <li><a href="booking.html">Book Ticket</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Contact</a></li>
+     </ul>
+   </nav>
+   <h1>Enter your Aadhar Detail : </h1>
+   <div class="GenQr">
+     <input id="text" type="text" value=" Enter aadhar card number" onblur="generateBarCode();" >
+      <button onclick="showqr();">
+
+          <h3>Generate E-Ticket</h3>
+
+        <!-- <i class="fa-solid fa-rotate"></i> -->
+      </button>
+     <img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=1000x1000" alt="" title="username.transactionId=?#{data}" width="50" height="50" />
+
+   </div>
+
+
+</body>
+
+</html>

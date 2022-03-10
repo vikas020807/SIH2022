@@ -14,6 +14,7 @@ nav{
   background: #1A1A40;
   height: 80px;
   width: 100%;
+
 }
 label.logo{
   color: white;
@@ -105,12 +106,21 @@ a:hover{
 }
 /***************NavBar-End************?
 /********search-Box************/
+.Search-Box{
+  background-color: #1A1A40;
+  backdrop-filter: blur(5px);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  justify-content: center;
+  align-content: center;
+}
 .wrapper{
   max-width: 450px;
-  margin: 150px auto;
+  margin: 30px auto 30px auto;
   justify-content: center;
   align-items: center;
   display: flex;
+
 }
 .wrapper .search-input{
   background: #fff;
@@ -130,6 +140,7 @@ a:hover{
     padding-left: 5px;
   }
 }
+
 .search-input input{
   height: 55px;
   width: 100%;
@@ -166,6 +177,7 @@ a:hover{
 .search-input.active .autocom-box li{
   display: block;
 }
+
 .autocom-box li:hover{
   background: #efefef;
 }
@@ -184,3 +196,37 @@ a:hover{
   cursor: pointer;
 }
 /****************Search-Box Ends****************/
+/********text-after-search*********/
+.text-img{
+  max-width: 100%;
+  display: flex;
+}
+.txt{
+  color: #EFFFFD;
+}
+.intro-text{
+  margin: 15% 15% 30% 15%;
+  font-weight: 900;
+  font-size: 2.5rem;
+  font-family: "Montserrat" sans-serif;
+  position: absolute;
+  max-height: inherit;
+  color: gray;
+  backdrop-filter: blur(5px);
+  /* box-shadow: 15px -13px 0.5rem; */
+  box-shadow: 13px 3px 10px 10px rgba(245,233,157,0.52);
+  border-radius: 5px;
+}
+/* .intro-text:hover{
+  background-color: rgba(255,255,255,.1);
+  border-radius: 5px;
+
+
+  border-color: black;
+  font-size: 3rem;
+} */
+.text-bck{
+  max-width: inherit;
+  /* opacity: 0.5; */
+  position: relative;
+}
